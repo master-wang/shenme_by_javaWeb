@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.acat.dao.IBanzuDao">
+    <insert id="addBanzu" parameterType="com.acat.model.Banzu">
+        insert into jw_wenhua (banzujianjie,biaoti,banzulogo,logoshiyi,zuzhijigou,fenzu)
+        values (#{banzujianjie},#{biaoti},#{banzulogo},#{logoshiyi},#{zuzhijigou},#{fenzu})
+    </insert>
+
+    <select id="getFenzuById" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        select fenzu from jw_renyuan where ID=#{ID}
+    </select>
+
+    <select id="getBanzuByFenzu" parameterType="java.lang.Integer" resultType="com.acat.model.Banzu">
+        select * from jw_wenhua where fenzu =#{fenzu}
+    </select>
+    <delete id="delete" parameterType="Integer">
+
+         delete from jw_wenhua where fenzu=#{fenzu}
+    </delete>
+    <select id="getByFenzu" parameterType="Integer" resultType="com.acat.vo.BanZuVo">
+        select biaoti,logoshiyi,banzujianjie,fenzu from jw_wenhua where fenzu=#{fenzu}
+    </select>
+    <select id="getAllByFezu" parameterType="Integer" resultType="com.acat.model.Banzu">
+        select * from jw_wenhua where fenzu=#{fenzu}
+    </select>
+    <select id="get" parameterType="Integer" resultType="com.acat.vo.LogoAndJigou">
+        select banzulogo,zuzhijigou from jw_wenhua where fenzu=#{fenzu}
+    </select>
+
+</mapper>

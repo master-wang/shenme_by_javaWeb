@@ -1,0 +1,71 @@
+﻿
+
+
+
+
+		  /* 电脑端的样式*/
+  @media screen and (min-width: 768px) { 
+		#position p{
+			margin-left:20px;
+			font-size: 17px;
+			font-weight: bold;
+
+		}
+		#logoImg{
+			width:83%;
+		}
+		  #logo img{
+			display: inline-block;
+			width:320px;
+			height:220px;
+			margin:15px;
+		}
+ }
+ /*电脑端显示的样式*/
+ @media only screen and (max-width: 767px) {
+          
+          #logoImg{
+          	width:100%;
+          }
+
+          #position p{
+			/*margin-left:20px;*/
+			font-size: 17px;
+			font-weight: bold;
+
+		}
+
+		 #logo img{
+			display: block;
+			width:180px;
+			height:110px;
+			margin:20px auto;
+
+		}
+		 #head{
+			width:100%;
+			height:100px;
+		}
+		#head img{
+			display: block;
+			height:100px;
+			width:100%;
+		}
+
+    }
+
+
+  /*  公共样式*/
+
+
+   #position{
+			border-bottom:3px solid #2E54BC;
+		}
+		#position img,#position p{
+            display: inline-block;
+		}
+		#house{
+			width:25px;
+			margin-top:-10px;
+		}
+     

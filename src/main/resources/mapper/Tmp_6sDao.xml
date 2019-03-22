@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.acat.dao.Tpm_6sDao">
+    <insert id="addTmp_6s" parameterType="com.acat.model.Tmp_6s">
+        insert into jw_6s_tpm(bumen,jianchashijian,jiancharenzhiwu,jiancharenxingming,jianchadidian,gaikuang,zerenren,chuliqingkuang,leixing,zhenggaishijian,zhonglei,fenzu) values(#{bumen},#{jianchashijian},#{jiancharenzhiwu},#{jiancharenxingming},#{jianchadidian},#{gaikuang},#{zerenren},#{chuliqingkuang},#{leixing},#{zhenggaishijian},#{zhonglei},#{fenzu})
+    </insert>
+    <delete id="deleteTmp_6sById" parameterType="java.lang.Integer">
+        delete from jw_6s_tpm where ID = #{ID}
+    </delete>
+    <update id="updateTmp_6sById"  parameterType="com.acat.model.Tmp_6s">
+        update jw_6s_tpm set bumen=#{bumen},jianchashijian=#{jianchashijian},jiancharenzhiwu=#{jiancharenzhiwu},jiancharenxingming=#{jiancharenxingming},jianchadidian=#{jianchadidian},gaikuang=#{gaikuang},zerenren=#{zerenren},chuliqingkuang=#{chuliqingkuang},leixing=#{leixing},zhenggaishijian=#{zhenggaishijian},zhonglei=#{zhonglei},fenzu=#{fenzu} where ID=#{ID}
+    </update>
+    <select id="findTmp_6s" parameterType="java.lang.Integer" resultType="java.util.Map" >
+        select * from jw_6s_tpm where fenzu=#{fenzu}
+    </select>
+    <select id="findTmp_6sById"   resultType="com.acat.model.Tmp_6s" parameterType="Integer">
+        select *  from jw_6s_tpm  where ID = #{ID}
+    </select>
+
+    <select id="getAllByFenzuAndZhonglei" parameterType="com.acat.vo.FenzuAndZhonglei" resultType="java.util.Map">
+        select * from jw_6s_tpm where fenzu=#{fenzu} and zhonglei=#{zhonglei}
+    </select>
+</mapper>

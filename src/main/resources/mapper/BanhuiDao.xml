@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.acat.dao.BanhuiDao">
+    <insert id="addBanhui" parameterType="com.acat.model.Banhui">
+        insert into banhui(yingchuqinrenshu,shijichuqinrenshu,qingjia,tiaoxiu,beizhu,banqian,banzhong,banhou,zhuti,fenzu) values(#{yingchuqinrenshu},#{shijichuqinrenshu},#{qingjia},#{tiaoxiu},#{beizhu},#{banqian},#{banzhong},#{banhou},#{zhuti},#{fenzu})
+
+    </insert>
+    <select id="getBanhuiById" parameterType="Integer" resultType="com.acat.model.Banhui">
+        select id,yingchuqinrenshu,shijichuqinrenshu,qingjia,tiaoxiu,beizhu,banqian,banzhong,banhou,zhuti,fenzu from banhui where id=#{id}
+    </select>
+    <update id="updateBanhui" parameterType="com.acat.model.Banhui">
+      update  banhui set yingchuqinrenshu=#{yingchuqinrenshu}, shijichuqinrenshu=#{shijichuqinrenshu},qingjia=#{qingjia},tiaoxiu=#{tiaoxiu},beizhu=#{beizhu},banqian=#{banqian},banzhong=#{banzhong},banhou=#{banhou},zhuti=#{zhuti} where id=#{id}
+</update>
+    <delete id="deleteBanhui" parameterType="Integer">
+        delete  from banhui where id=#{id}
+    </delete>
+    <select id="getAll" parameterType="Integer" resultType="java.util.Map">
+        select id,zhuti,shijichuqinrenshu from banhui where fenzu=#{fenzu}
+    </select>
+
+    <select id="getListByFenzu" parameterType="java.lang.Integer" resultType="java.util.Map">
+        select * from banhui where fenzu=#{fenzu}
+    </select>
+</mapper>
+

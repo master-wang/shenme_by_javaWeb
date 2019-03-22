@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.acat.dao.HelihuajianyiDao">
+    <insert id="addHelihuajianyi" parameterType="com.acat.model.Helihuajianyi">
+insert into helihuajianyi(leixing,neirong,gaishanfangan,beizhu,fenzu) values (#{leixing},#{neirong},#{gaishanfangan},#{beizhu},#{fenzu})
+    </insert>
+    <select id="getHelihuajianyiById" parameterType="Integer" resultType="com.acat.model.Helihuajianyi">
+        select id,leixing,neirong,gaishanfangan,beizhu,fenzu from helihuajianyi where id=#{id}
+    </select>
+    <update id="updateHelihuajianyi" parameterType="com.acat.model.Helihuajianyi">
+        update helihuajianyi set leixing=#{leixing},neirong=#{neirong},gaishanfangan=#{gaishanfangan},beizhu=#{beizhu},fenzu=#{fenzu} where id=#{id}</update>
+    <delete id="deleteHelihuajianyi" parameterType="Integer">
+        delete  from helihuajianyi where id=#{id}
+    </delete>
+
+    <select id="getListByFenzu" parameterType="java.lang.Integer" resultType="java.util.Map">
+        select * from helihuajianyi where fenzu=#{fenzu};
+    </select>
+</mapper>
+

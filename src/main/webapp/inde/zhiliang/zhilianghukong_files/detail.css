@@ -1,0 +1,82 @@
+  /* 电脑端的样式*/
+  @media screen and (min-width: 768px) {
+        .detail .con{
+            text-indent: 2rem;
+            font-size: 16px;
+        }
+        .detail  .xueXiListLeft  ul{
+            margin-top:17px;
+            padding:10px;
+            width:85%;
+            overflow: hidden;
+            background-color: #F2F2F2;
+            border-radius: 5px;
+        }
+        .detail .xueXiListLeft  li{
+            width:90%;
+            margin:15px auto;
+            padding:0 10px;
+            height:25px;
+            line-height: 25px;
+            list-style: none;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 5px;
+
+        }
+        .detail .xueXiListLeft{
+            width:100%;
+        }
+        .detail .xueXiListLeft  li a{
+            display: inline-block;
+            margin-left:5px;
+            text-decoration: none;
+            color:black;
+            font-size: 18px;
+            font-family: "楷体";
+        }
+        .detail .xueXiListLeft  li img{
+            display: inline-block;
+            float:left;
+            margin-right:20px;
+            width:20px;
+            height:20px;
+        }
+        .detail .xueXiListLeft  li a:hover{
+            color:blue;
+        }
+        .detail .xueXiListLeft  li span{
+            float:right;
+        }
+
+ }
+ /*电脑端显示的样式*/
+ @media only screen and (max-width: 767px) {
+          #title{
+            display: none;
+          }
+          #newContent{
+            width:100%;
+          }
+
+    }
+
+
+  /*  公共样式*/
+      .detail p{
+          word-break: break-all;
+          word-wrap: break-word;
+        }
+        .detail .articleTitle{
+            width:95%;
+            margin:0px auto 20px;
+            padding:10px 0;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+        .img{
+            width:65%;
+            display: block;
+            margin:20px auto;
+        }

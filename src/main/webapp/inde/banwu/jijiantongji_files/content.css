@@ -1,0 +1,262 @@
+  @media screen and (min-width: 768px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+         #newContent{
+            display: block;
+         }
+        .detail p{
+          word-break: break-all;
+          word-wrap: break-word;
+        }
+        .detail #headtitle{
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+        .detail #con{
+            min-height:450px;
+            text-indent: 2rem;
+            font-size: 16px;
+        }
+        .detail .xueXiListLeft{
+            margin-top:17px;
+            padding:10px;
+            width:85%;
+            overflow: hidden;
+            background-color: #F2F2F2;
+            border-radius: 5px;
+        }
+        .detail li{
+            width:90%;
+            margin:15px auto;
+            padding:0 10px;
+            height:25px;
+            line-height: 25px;
+            list-style: none;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 5px;
+
+        }
+
+ }
+ @media only screen and (max-width: 767px) {
+          #newContent{
+            display: none;
+          }
+          .detail .xueXiListLeftl{
+            margin-top:5px;
+            padding:10px;
+            width:100%;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .detail li{
+            width:100%;
+            margin:15px auto;
+            height:25px;
+            line-height: 25px;
+            list-style: none;
+            overflow: hidden;
+            border-bottom: 2px dashed #cfcfcf;
+
+        }
+      }
+
+.detail{
+    width:85%;
+}
+.detail .xueXiListLeft li a{
+    display: inline-block;
+    margin-left:5px;
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+    font-family: "楷体";
+}
+.detail .xueXiListLeft  li img{
+    display: inline-block;
+    float:left;
+    margin-right:20px;
+    width:20px;
+    height:20px;
+}
+.detail .xueXiListLeft  li a:hover{
+    color:blue;
+}
+.detail .xueXiListLeft li span{
+    float:right;
+}
+
+.box{
+   width:85%;
+   height:30px;
+   margin:30px auto;
+
+
+}
+.futitle{
+
+    width:50%;
+    height:30px;
+    line-height:30px;
+    text-algin:center;
+    float:left;
+}
+.smalltitle{
+  margin-top:5px;
+
+}
+li{
+  list-style:none;
+}
+.fenYe{
+   width:300px !important;
+   height:42px;
+   margin:20px auto;
+    background-color:white !important;
+}
+.fenYe li{
+      float:left;
+      width:30px;
+      height:30px;
+      line-height:30px;
+      background-color:#E6E6E6;
+      margin:0 5px !important;
+      text-align:center;
+ }
+
+
+ .organizationImg{
+        display:block;
+        width:600px !important;
+        margin:20px auto;
+ }
+
+
+.classImg{
+    height:450px !important;
+}
+ .contentBox{
+    height:800px;
+    overflow-y:scroll;
+ }
+
+.left{
+          width:60%;
+          float:left;
+
+      }
+      .banZuList{
+        border-bottom:1px dashed #cfcfcf;
+        overflow:hidden;
+        margin:10px 0;
+      }
+       .right{
+          width:38%;
+          float:right;
+
+
+      }
+
+       .right .rightLeftContent{
+          width:55%;
+          float:left;
+      }
+       .right .rightRightContent{
+          width:43%;
+          float:right;
+      }
+
+.xueXiList{
+            width:100%;
+            height:500px;
+            overflow-y:auto;
+
+        }
+
+        .xueXiList  .titleList{
+            width:45%;
+            float:left;
+            overflow:hidden;
+            display:inline-block;
+        }
+        .xueXiList  .authorList{
+            width:30%;
+            float:left;
+            margin-left:15px;
+        }
+        .xueXiList  .timeList{
+            width:20%;
+            float:right;
+        }
+
+        .xueXiList li{
+            border-bottom:1px dashed #cfcfcf;
+            overflow: hidden;
+            padding-bottom:3px;
+        }
+
+
+        ::-webkit-scrollbar
+{
+    width: 5px;
+    height: 5px;
+    background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    background-color: white;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #B8B8C2;
+}
+
+.detailImg{
+   width:300px;
+   height:200px;
+   display:block;
+   float:left;
+   margin:20px 30px;
+}
+
+#rightMain{
+      margin:20px auto;
+    }
+
+
+/*对于其中的计件统计的页面的样式*/
+#logo{
+  position:relative;
+    overflow: scroll;
+    width: 100%;
+}
+#jiJianTongJiImg{
+   float:left;
+   width:280px !important;
+   position:absolute; bottom:0px; left:20px;
+}
+#jiJianTongJiTable{
+   float:right;
+   margin:20px 20px 0 0 ;
+   width:70%;
+}
+#jiJianTongJiTable td,#kaoQinHuiZong td{
+   height:32px;
+   text-align:center;
+}
+
+
+#kaoQinHuiZong{
+   margin:20px auto;
+   width:80%;
+}
+
+

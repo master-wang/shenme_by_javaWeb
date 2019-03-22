@@ -1,0 +1,7 @@
+.meetingTable{
+    text-align: center;
+}
+.meetingTable thead td{
+    width: 20%;
+    height: 40px;
+}

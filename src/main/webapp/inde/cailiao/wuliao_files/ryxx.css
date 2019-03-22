@@ -1,0 +1,71 @@
+#peopleMes{
+    text-align: center
+}
+#peopleMes tr{
+    height: 30px;
+}
+.logo {
+    font-weight: bolder;
+    margin-right: 25px;
+    margin-top: -60px;
+    float: right;
+    font-size: 35px;
+}
+.banzu {
+    font-weight: bolder;
+    margin-left: -55px;
+    margin-top: 50px;
+    font-size: 35px;
+    width: 35px;
+}
+.ban {
+    margin-top: -190px;
+    width: 200px;
+    margin-left: 500px;
+}
+.yuanGongFengCai {
+    margin-top: 0px;
+    margin-left: 25px;
+}
+.bottom {
+    margin-top: 10px;
+}
+#div1 {
+    position: relative;
+    width: 70%;
+    height: 200px;
+    overflow: hidden;
+    margin-left: 240px;
+    margin-top: -240px;
+}
+#div2 {
+    margin: 0 auto;
+    position: absolute;
+}
+li {
+    float: left;
+    list-style-type: none;
+    padding: 3px;
+}
+img {
+    border: none;
+}
+#div2 li a:hover {
+    top: -10px;
+}
+a {
+    position: relative;
+}
+.middle {
+    width: 1000px;
+    text-align: center;
+    margin-left: 80px;
+}
+.top {
+    width: 150%;
+    margin-top: 80px;
+}
+.mid {
+    font-size: 22px;
+    line-height: 40px;
+}

@@ -1,0 +1,136 @@
+      @media screen and (min-width: 768px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+
+                body{
+                        background-image: url(p4.jpg);
+                        background-attachment: fixed;
+                        background-size: 100% 100%;
+                }
+
+                  #form{
+                     padding:20px 45px;
+                     height:450px;
+                     width:355px;
+                     position:fixed;
+                         margin:auto;
+                         left:0;
+                         right:0;
+                         top:0;
+                         bottom:0;
+                     background-color:white;
+                     box-sizing:border-box;
+                     background-color: rgba(250,250,250,0.9);
+                  }
+
+ }
+
+
+
+     @media only screen and (max-width: 767px) {
+          #form{
+                     width:100%;
+                     padding:30px 0;
+                     background-color:white;
+                     box-sizing:border-box;
+                     background-color: rgba(250,250,250,0.9);
+                  }
+      }
+
+
+   *{
+                        padding:0;
+                        margin:0;
+        }
+
+  #form img{
+      display:block;
+      width:80%;
+      margin:10px auto;
+  }
+  #form p{
+        display: block;
+    max-width: 100%;
+    margin-top:20px;
+    margin-bottom:5px;
+    font-weight: bold;
+    font-size:13px;
+    color: #666;
+  }
+   #form span{
+          float:left;
+          font-size: 13px;
+          margin:20px 0 0 10px;
+          color:blue;
+   }
+
+    #form span:hover{
+        text-decoration: underline;
+        color:red;
+        cursor: pointer;
+    }
+
+  .text{
+                display: block;
+            width: 90%;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.44;
+            color: #555555;
+            background-color: #fff;
+            background-image: none;
+            border: 2px solid #ccc;
+            border-radius: 3px;
+            -webkit-transition: border-color ease-in-out 0.15s;
+            -o-transition: border-color ease-in-out 0.15s;
+            transition: border-color ease-in-out 0.15s;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+  }
+
+  .btn{
+                display: block;
+        width: 100%;
+        color: #fff;
+            background-color: #009688;
+            border-color: transparent;
+            display: inline-block;
+            margin-bottom: 0;
+            margin-top:30px;
+            font-weight: 600;
+            text-align: center;
+            
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 0;
+            white-space: nowrap;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 8px 15px;
+            font-size: 13px;
+            line-height: 1.428571429;
+            border-radius: 3px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.2s cubic-bezier(0.35, 0, 0.25, 1);
+            transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.2s cubic-bezier(0.35, 0, 0.25, 1);
+            -o-transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), transform 0.2s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.3s ease-in-out;
+            transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), transform 0.2s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.3s ease-in-out;
+            transition: box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), transform 0.2s cubic-bezier(0.35, 0, 0.25, 1), background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s cubic-bezier(0.35, 0, 0.25, 1), -webkit-transform 0.2s cubic-bezier(0.35, 0, 0.25, 1);
+  }
+
+  #toSign{
+      margin:10px 0 15px 0;
+                font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px !important;
+            line-height: 1.428571429;
+            box-sizing: border-box;
+            color:#009688 !important;
+  }
+
+
+

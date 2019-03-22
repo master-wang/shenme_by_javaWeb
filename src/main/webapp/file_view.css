@@ -1,0 +1,59 @@
+
+.table tbody tr td{
+vertical-align: middle;
+}
+.table th, .table td {
+text-align: center;
+vertical-align: middle!important;
+}
+
+
+.contentBox{
+display: none;
+}
+.headtitle{
+text-align: center;
+}
+.box{
+padding-top:30px;
+}
+#err{
+position: absolute; top:0;bottom:0;left:0;right:0;
+margin:auto;
+width:50%;
+}
+
+.meetingForm{
+width: 80%;
+margin: auto;
+text-align: center;
+
+}
+.meetingTable td{
+border:1px solid;
+table-layout:fixed;
+word-break: break-all;
+text-align: center;
+vertical-align: middle!important;
+}
+.meetingTable{
+margin: auto;
+border:1px solid;border-collapse:collapse;
+}
+.meetingTable thead td .meetingTable thead td input .numberP td{
+width: 100px;
+height: 50px;
+}
+.summary{
+height: 200px;
+}
+.meetingTable thead td {
+width: 20%;
+height: 40px;
+}
+.inform{
+    width: 80%;
+    height: 800px;
+    margin-left: 10%;
+    overflow: scroll;
+}

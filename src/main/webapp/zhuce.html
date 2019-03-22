@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>注册页面</title>
+<link rel="stylesheet" type="text/css" href="zhuce/login.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="zhuce/bootstrap.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post" id="form">
+            <input type="hidden" name="_xsrf" value="2|ccb3257b|4f41bd9a627971d1b4987acdc20c9d8c|1541608790">
+            <img src="zhuce/logo.png">
+        <hr size="1px" color="#CBCBCB">
+        <p>输入旧密码</p>
+           <input type="password" class="text" name="username" placeholder="旧密码" id="jiumima">
+        <p>输入新密码</p>
+        <input type="password" class="text" name="password" placeholder="新密码" id="xinmima">
+
+            <input type="button"  value="创建密码" class="btn" onclick="zhucetijiao()">
+            <span><a href="./login.html">返回登录界面</a></span>
+        </form>
+        
+    </div>
+    <script>
+
+            function getQueryString(name) {
+
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+
+                var r = window.location.search.substr(1).match(reg);
+
+                if (r != null) return decodeURI(r[2]);
+
+                return null;
+
+            }
+
+            function zhucetijiao(){
+                var yonghuming=getQueryString("yonghuming1");
+                var mima=$("#jiumima").val();
+                var newMima=$("#xinmima").val();
+                data={
+                    "yonghuming":yonghuming,
+                    "mima":mima,
+                    "newMima":newMima
+                }
+                data=JSON.stringify(data);
+
+                if(mima!=''&&newMima!=""){
+                    $.ajax({
+                        url: "/shenmu_war_exploded/login/getMima",//后台接收的url
+                        type: 'POST',
+                        data: data,
+                        dataType: 'JSON',
+                        contentType: 'application/json;charset=UTF-8',
+                        async: false,
+                        success: function (result) {
+                            if (result == "0") {
+                                alert("初始密码输入错误，请修改！");
+                                window.location.href = "./zhuce.html?yonghuming1="+yonghuming;
+                            } else if (result == "1") {
+                                alert("新密码与初始密码一致，请修改！");
+                                window.location.href = "./zhuce.html?yonghuming1="+yonghuming;//这里是登陆成功之后要跳转的页面url
+                            } else if (result == "2"){
+                                alert("修改成功！");
+                                window.location.href = "./login.html";//这里是登陆成功之后要跳转的页面url
+                            }
+                        },
+                        error: function () {
+                            alert("失败！");
+
+
+                        }
+                    });
+                }
+                else{
+                    alert("账号密码不能为空！！！");
+                }
+            }
+
+
+    </script>
+    
+
+</body></html>

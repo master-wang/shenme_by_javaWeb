@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.acat.dao.IAnquanzuoyeDao">
+    <insert id="addAnquanzuoye" parameterType="com.acat.model.Anquanzuoye">
+        insert into jw_guanjianzuoye(guanjianxiangmu,name,jiandanmiaoshu,wenjianshangchuan,wenjianleixing,fenzu) values(#{guanjianxiangmu},
+        #{name},#{jiandanmiaoshu},#{wenjianshangchuan},#{wenjianleixing},#{fenzu})
+    </insert>
+
+    <delete id="deleteAnquanzuoye" parameterType="java.lang.Integer">
+        delete from jw_guanjianzuoye where id=#{id}
+    </delete>
+
+    <update id="updateAnquanzuoye" parameterType="com.acat.model.Anquanzuoye">
+        update jw_guanjianzuoye set guanjianxiangmu=#{guanjianxiangmu},name=#{name},jiandanmiaoshu=#{jiandanmiaoshu},
+        wenjianshangchuan=#{wenjianshangchuan},wenjianleixing=#{wenjianleixing},fenzu=#{fenzu} where id=#{id}
+    </update>
+
+    <select id="getAnquanzuoyeById" parameterType="java.lang.Integer" resultType="com.acat.model.Anquanzuoye">
+        select * from jw_guanjianzuoye where id=#{id}
+    </select>
+
+    <select id="listAll" resultType="java.util.Map">
+        select * from jw_guanjianzuoye
+    </select>
+
+    <select id="getAnquanzuoyeByFenzu" parameterType="java.lang.Integer" resultType="java.util.Map">
+        select * from jw_guanjianzuoye where fenzu=#{fenzu}
+    </select>
+</mapper>
+

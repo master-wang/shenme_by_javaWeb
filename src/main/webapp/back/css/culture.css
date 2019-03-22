@@ -1,0 +1,24 @@
+
+
+.culture_fome{
+    border:1px solid black;
+    background-color: rgb(218,223,230);
+
+}
+#banzuwenhua p{
+    margin-top: 30px;
+}
+#banzuwenhua label{
+    font-size: 20px;
+    margin-right: 15px;
+}
+#culturetittle{
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+}
+   
+/* 移动端 */
+@media only screen and (max-width: 796px) {
+    
+}

@@ -1,0 +1,36 @@
+
+.seven-table {
+    width: 800px;
+    margin-top: 80px;
+    height: 500px;
+}
+
+.seven-table textarea{
+    width: 80%;
+    height: 100%;
+}
+.btu {
+    width: 100px;
+    height: 40px;
+    list-style-type: none;
+    border: 1px solid #999;
+    background-color: rgba(230, 230, 230, 0.3);
+}
+.inp-s {
+    margin-left: 831px;
+}
+.ddt {
+    text-align: left;
+    padding-left: 44px;
+}
+.dtt {
+    width: 150px;
+    text-align: center;
+}
+.spn {
+    margin-left: 10px;
+}
+
+
+/* 移动端 */
+@media only screen and (max-width: 796px) {}

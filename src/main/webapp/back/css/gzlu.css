@@ -1,0 +1,51 @@
+
+.writeContent{
+    margin: 0px auto;
+    overflow:scroll;
+    overflow-y:scroll;
+    overflow-x:hidden；
+}
+.writeContent h3{
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgb(229,229,229);
+}
+.writeContent table{
+    margin: 5px auto;
+    width: 80%;
+}
+
+.writeContent table tr{
+    margin: 0;
+    padding: 0;
+}
+.writeContent table tr input[type="text"]
+{
+  width:80%;
+  border:none;
+  height: 100%;
+  border: none;
+  text-align: center;
+  background: rgb(244,241,242);
+}
+.writeContent table tr input[name="4"]{
+    background:rgb(233,237,240);
+}
+
+#specialDiv{
+   display: inline-block;
+    margin-left: 600px;
+}
+.special{
+    margin-right: 30px;
+    width: 70px;
+}
+.writeContent table,td{
+    border: 1px solid rgb(150, 145, 145)
+}
+
+
+
+/* 移动端 */
+@media only screen and (max-width: 796px) {}

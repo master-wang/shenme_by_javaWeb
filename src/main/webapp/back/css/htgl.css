@@ -1,0 +1,65 @@
+
+
+#banzuwenhua label{
+     width: 300px;
+     display: inline-block;
+     text-align: right;
+     vertical-align:top
+}
+#banzuwenhua p{
+    margin-top: 20px;
+}
+#banzuwenhua{
+    text-align: left;
+    margin-left:-100px
+}
+body{
+    height: 100%;
+    overflow: hidden;
+    background: #E5E5E5!important;
+}
+#banzuwenhua label{
+     width: 300px;
+     display: inline-block;
+     text-align: right;
+     vertical-align:top;
+}
+#banzuwenhua p{
+    margin-top: 20px;
+}
+#banzuwenhua{
+    text-align: left;
+    margin-left:-100px
+}
+.writeContent{
+    margin-left: 0px;
+    margin-top: 0px;
+    height: 673px; 
+    display: none;
+  
+   float: left;
+}
+ /* 手机屏幕在326以下的 */
+@media only screen and (max-width: 350px) {
+    #secondNav li{
+        width:100%;
+        height:90px;
+        padding:10px 5px;
+      }
+}
+/* 移动端 */
+@media only screen and (max-width: 796px) {
+    
+}
+ /* 22寸的电脑尺寸样式 */
+ @media screen and (min-width: 1500px) {
+    #banzuwenhua label {
+      width: 40%;
+      display: inline-block;
+      text-align: right;
+      vertical-align: top;
+  }
+    #t6stpmgai label,#t6stpm  label{
+        width: 50%;
+    }
+  }

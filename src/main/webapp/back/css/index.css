@@ -1,0 +1,338 @@
+*{
+  padding:0;
+  margin:0;
+}
+body{
+  background-color: #E5E5E5;
+}
+/*pc端的样式*/
+@media screen and (min-width: 797px) {
+    body{
+      overflow: scroll;
+    }
+    #jiden_juzhong td{
+      width: 5%;
+    }
+     #head{
+      width:83%;
+      height:50px;
+      background-color:#009688;
+      float:right;
+    }
+    #jifenluru{
+      float: left;
+    }
+    #jifenjiaojiao{
+      margin-left: -30%;
+    }
+    .content{
+          width:83%;
+          height: 100%;
+          float:right;
+          background-color:#E5E5E5;
+          display: none;
+       }
+    .inform
+    {
+      margin: auto 0px;
+      padding-right: 20px;
+      padding-left: 20px;
+      width:100%;
+      height:90%;
+      overflow:scroll;
+      overflow-x: hidden;
+    }
+    .renyuanyidong{
+      margin-left: 30%;
+    }
+     #head span
+     {
+             display: block;
+             float:left;
+             margin:10px 0 0 40px;
+             font-size: 13px;
+             color:white;
+             cursor: pointer;
+      }
+      #secondNav{
+        display: none;
+      }
+      #banzudi{
+        margin-left: 40%;
+      }
+
+ }
+
+
+/*移动端的显示
+*/     @media only screen and (max-width: 796px) {
+          #leftNave{
+            display:none;
+          }
+          #jiden_juzhong td{
+            width: 5%;
+          }
+          #chuxian label{
+        width: 25% !important;
+        }
+      
+        #head{
+          width:100%;
+          height:50px;
+          background-color:#009688;
+        }
+        
+        .content{
+              width:100%;
+              height: 100%;
+              position: relative;
+                float:right;
+              background-color:#E5E5E5;
+              display: none;
+              overflow: scroll;
+              margin-top: -9px;
+            }
+
+          .inform{
+            width:99%;
+            height:100%;
+            overflow: scroll;
+          }
+          #shoujibanzhu{
+          height: 86% !important;
+          overflow-x: hidden;
+        }
+          #shoujizhigong{
+            height: 86% !important;
+            overflow-x: hidden;
+          }
+           #head span{
+             display: block;
+             float:left;
+             margin:20px 0 0 40px;
+             font-size: 13px;
+             color:white;
+             cursor: pointer;
+          }
+          #secondNav{
+            display: block;
+            background-color: black;
+
+          }
+          #secondNav li{
+            width:100%;
+            height:70px;
+            padding:10px 5px;
+          }
+           #secondNav li span{
+             display: block;
+             float:left;
+             width:25%;
+             text-align: center;
+             color:white;
+           }
+           #secondNav li span:hover{
+              background-color: #FAFAFA;
+              color:black;
+              cursor: pointer;
+           }
+           .summary{
+            height: 100px;
+        }
+        #shengpiguanlili button{
+          margin-bottom: 7%;
+          margin-top: 7%;
+        }
+        .seven-table {
+          width: 100%!important;
+          margin-top: 5%!important;
+          height: 80%;
+      }
+      .seven-table  textarea{
+        width: 100%!important;
+        height: 100%;
+    }
+        
+      
+      }
+
+
+#app{
+  width:100%;
+}
+ #leftNave{
+    float:left;
+    width:17%;
+    height:-moz-calc(100%);
+    height:-webkit-calc(100%);
+    background-color:#222D32;
+    font-size:14px;
+    color:white;
+ }
+ h3{
+    background-color:#007D71;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    font-size:16px;
+ }
+  #leftNave li{
+      margin:5px 0;
+      width:100%;
+      height:43px;
+      transition: all .35s;
+  }
+  #leftNave li:hover{
+    background-color:black;
+    border-left:3px solid #009688;
+  }
+  #leftNave img{
+      margin:10px 0 0 10px;
+      float:left;
+      display:block;
+      width:20px;
+      height:20px;
+  }
+  #leftNave p{
+    margin:0 5px 0 10px;
+
+    width:80%;
+    height:43px;
+    line-height:43px;
+    text-align:center;
+    color: white;
+  }
+
+
+  #leftNave span{
+     float:right;
+     display:block;
+     margin:10px 8px 0 0;
+     width:10px;
+     height:20px;
+     line-height:20px;
+
+  }
+
+  a{
+     color:white;
+     text-decoration:none;
+  }
+
+  /*对应其中的内容的展示部分*/
+
+
+#person{
+    display:block;
+    width:25px;
+    height:25px;
+    float:right;
+    margin:10px 3% 0 0;
+}
+    .inform::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+            height: 4px;
+        }
+        .inform::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 5px;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.2);
+        }
+        .inform::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 0;
+            background: rgba(0,0,0,0.1);
+        }
+
+   #addnew{
+     display:block;
+     width:25px;
+     height:25px;
+     float:right;
+     margin:20px 10% 10px 10px;
+  }
+
+
+   table{
+     width:100%;
+     margin:0 auto;
+   }
+
+  tr:nth-child(odd) {
+    background-color:#E9EDF0;
+   }
+
+  tr:nth-child(even) {
+      background-color: #F4F1F2;
+  }
+
+   #thead{
+      background-color:#DADFE6;
+   }
+   #thead td{
+      
+      font-size:16px;
+      font-weight:bold;
+   }
+   td{
+      text-align:center;
+      height:33px;
+      font-size:13px;
+   }
+   .alter{
+      color:#6699CC;
+      display:inline-block;
+      margin-right:5px;
+      font-size:13px;
+      cursor:pointer
+   }
+   .delete{
+      color:red;
+      display:inline-block;
+      margin-left:5px;
+       font-size:13px;
+       cursor:pointer
+   }
+   .alter:hover,.delete:hover{
+       text-decoration:underline;
+   }
+
+
+    /*对应于其中的班前班后会的*/
+   .meetingForm{
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    .meetingTable td{
+        border:1px solid;
+        table-layout:fixed;
+        word-break: break-all
+    }
+    .meetingTable{
+        margin: auto;
+        border:1px solid;border-collapse:collapse;
+    }
+    .meetingTable thead td,.meetingTable thead td input,.numberP td，.meetingTable thead td textarea,{
+        width: 100px;
+        height: 50px;
+    }
+    .meetingTable .summary textarea{
+         padding:10px;
+    }
+    .summary{
+        height: 200px;
+    }
+    .content .submit,.content .clear{
+      display:inline-block;
+      margin-left:30px;
+      width:70px;
+      height:30px;
+      text-align:center;
+      border-radius:5px;
+      margin-top:30px;
+    }
+
+    
+    
+

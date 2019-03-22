@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.acat.dao.IJifenDao">
+    <insert id="addJifen" parameterType="com.acat.model.Jifen">
+        insert into jw_jifen (riqi, jifen, jifenleixing, xingming)  values (#{riqi}, #{jifen}, #{jifenleixing}, #{xingming})
+    </insert>
+
+    <!--<select id="getZhuzhangFenzuById" parameterType="java.lang.Integer" resultType="java.lang.Integer">-->
+        <!--select fenzu from jw_renyuan where ID = #{ID}-->
+    <!--</select>-->
+
+    <select id="getJifenVo" parameterType="com.acat.vo.JifenleixingAndFenzuVo" resultType="java.util.Map">
+        select jw_jifen.xingming,jw_jifen.riqi,jw_jifen.jifen from jw_jifen  inner join jw_renyuan on jw_renyuan.xingming=jw_jifen.xingming where jw_renyuan.fenzu=#{fenzu} and jw_jifen.jifenleixing=#{jifenleixing}
+    </select>
+
+    <select id="huizongJifen" parameterType="com.acat.vo.JifenleixingAndFenzuVo" resultType="java.util.Map">
+        select jw_jifen.xingming,sum(jw_jifen.jifen) as gerenfenzhihuizong ,jw_renyuan.fenzu from jw_jifen  inner join jw_renyuan on jw_renyuan.xingming=jw_jifen.xingming where jw_renyuan.fenzu=#{fenzu} and jw_jifen.jifenleixing=#{jifenleixing} group by jw_jifen.xingming
+    </select>
+
+    <select id="getriqi" parameterType="com.acat.vo.JifenleixingAndFenzuVo" resultType="java.util.Map">
+      select distinct jw_jifen.riqi from jw_jifen  inner join jw_renyuan on jw_renyuan.xingming=jw_jifen.xingming where jw_renyuan.fenzu=#{fenzu} and jw_jifen.jifenleixing=#{jifenxingming}
+    </select>
+
+    <select id="getRiqi" parameterType="com.acat.vo.XingmingAndLeixingVo" resultType="java.lang.String">
+        select riqi from jw_jifen where id = (select max(id) from jw_jifen where jifenleixing=#{jifenleixing} and xingming=#{xingming});
+    </select>
+
+    <select id="getXingming" parameterType="java.lang.Integer" resultType="java.lang.String">
+        select xingming from jw_renyuan where ID = (select min(ID) from jw_renyuan where fenzu=#{fenzu});
+    </select>
+
+    <select id="getXinxiByLeixingAndRiqi" parameterType="com.acat.vo.JIfenleixingAndRiqiVo" resultType="com.acat.model.Jifen">
+        select jw_jifen.id,jw_jifen.riqi,jw_jifen.jifen,jw_jifen.jifenleixing,jw_jifen.xingming from jw_jifen inner join jw_renyuan on jw_renyuan.xingming=jw_jifen.xingming where jw_jifen.jifenleixing = #{jifenleixing} and jw_jifen.riqi = #{riqi} and jw_renyuan.fenzu=#{fenzu};
+    </select>
+
+    <select id="getRiqiMohuchaxun" parameterType="com.acat.vo.JifenleixingAndStrVo" resultType="String">
+        select riqi from jw_jifen where jifenleixing=#{jifenleixing} and riqi like concat ('%',#{str},'%');
+    </select>
+</mapper>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.acat.dao.IDengluDao">
+
+
+    <select id="login" resultType="com.acat.model.Denglu" parameterType="com.acat.model.Denglu">
+        select * from jw_denglu where yonghuming=#{yonghuming} and mima=#{mima}
+    </select>
+    <update id="update" parameterType="com.acat.model.Denglu">
+        update jw_denglu set mima=#{mima} where yonghuming=#{yonghuming}
+    </update>
+
+    <select id="getRenyuanZhiwei" parameterType="java.lang.String" resultType="Integer">
+        select r.zhiwei from jw_renyuan r inner join jw_denglu d on r.xingming=d.yonghuming and d.yonghuming = #{yonghuming}
+    </select>
+
+    <select id="getMimaByYonghuming" parameterType="java.lang.String" resultType="java.lang.String">
+        select mima from jw_denglu where yonghuming=#{yonghuming}
+    </select>
+
+
+    <select id="getRenyuanFenzu" parameterType="java.lang.String" resultType="Integer">
+        select r.fenzu from jw_renyuan r inner join jw_denglu d on r.xingming=d.yonghuming and d.yonghuming = #{yonghuming}
+    </select>
+
+    <select id="getFenzuRenyuan" parameterType="Integer" resultType="java.util.Map">
+        select * from jw_renyuan where fenzu = #{fenzu}
+    </select>
+
+    <select id="getZuzhangInfo" parameterType="java.lang.String" resultType="com.acat.model.Renyuan" >
+        select * from jw_renyuan where xingming =#{xingming}
+    </select>
+
+    <select id="updateFlag" parameterType="com.acat.model.Denglu">
+        update jw_denglu set flag = 1 where yonghuming=#{yonghuming}
+    </select>
+
+    <select id="getFlagByYonghuming" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select flag from jw_denglu where yonghuming=#{yonghuming}
+    </select>
+</mapper>
